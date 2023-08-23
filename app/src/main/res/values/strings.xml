@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CattyFacts</string>
     <string name="catty_facts">CATTY FACTS</string>
-    <string name="get_fact">Get Fact</string>
+    <string name="get_fact">Cat Fact</string>
     <string name="imagelogo">imageLogo</string>
+    <string name="text_template">"\"%s\""</string>
 </resources>
