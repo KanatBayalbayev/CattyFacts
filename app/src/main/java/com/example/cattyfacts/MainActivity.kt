@@ -2,6 +2,7 @@ package com.example.cattyfacts
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -22,6 +23,21 @@ class MainActivity : AppCompatActivity() {
             binding.textViewFact.text = String.format(textTemplate, it)
             Log.d("MainActivity", it.toString())
         })
+        viewModel.getError().observe(this, Observer {
+            if (it){
+                binding.textViewError.visibility = View.VISIBLE
+            } else {
+                binding.textViewError.visibility = View.GONE
+            }
+        })
+        viewModel.getStatusLoading().observe(this, Observer {
+            if (it){
+                binding.progressBar.visibility = View.VISIBLE
+            } else {
+                binding.progressBar.visibility = View.GONE
+            }
+        })
+
         binding.buttonToGenerateFact.setOnClickListener {
             viewModel.loadData()
         }

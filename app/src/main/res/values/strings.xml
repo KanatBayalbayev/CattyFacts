@@ -4,4 +4,5 @@
     <string name="get_fact">Cat Fact</string>
     <string name="imagelogo">imageLogo</string>
     <string name="text_template">"\"%s\""</string>
+    <string name="error_message">Ошибка загрузки...</string>
 </resources>
